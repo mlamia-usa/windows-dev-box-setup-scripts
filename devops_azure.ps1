@@ -25,7 +25,7 @@ function executeScript {
 #--- Setting up Windows ---
 executeScript "FileExplorerSettings.ps1";
 executeScript "SystemConfiguration.ps1";
-executeScript "RemoveDefaultApps.ps1";
+#executeScript "RemoveDefaultApps.ps1";
 executeScript "CommonDevTools.ps1";
 executeScript "Browsers.ps1";
 
@@ -43,7 +43,7 @@ choco install -y terraform
 
 # Install tools in WSL instance
 write-host "Installing tools inside the WSL distro..."
-Ubuntu1804 run apt install ansible -y
+Ubuntu2404 run apt install ansible -y
 
 Enable-UAC
 Enable-MicrosoftUpdate
